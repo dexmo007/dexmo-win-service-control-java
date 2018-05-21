@@ -1,4 +1,4 @@
-package com.dexmohq.util;
+package com.dexmohq.cmd.parse;
 
 import java.lang.reflect.InvocationTargetException;
 

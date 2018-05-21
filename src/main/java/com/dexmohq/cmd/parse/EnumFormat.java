@@ -1,4 +1,4 @@
-package com.dexmohq.util;
+package com.dexmohq.cmd.parse;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -7,12 +7,10 @@ import java.lang.annotation.Target;
 
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ElementType.TYPE, ElementType.FIELD})
-public @interface Skip {
+public @interface EnumFormat {
 
-    int n();
+    EnumFormatType value();
 
-    int LAST = -1;
-
-    String split() default "\\s+";
+    EnumFormatType DEFAULT = EnumFormatType.VALUE;
 
 }

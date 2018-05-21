@@ -1,4 +1,4 @@
-package com.dexmohq.util;
+package com.dexmohq.cmd.parse;
 
 public enum NumberFormatType implements AbstractNumberFormatType {
     DECIMAL() {

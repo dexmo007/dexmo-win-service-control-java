@@ -1,4 +1,6 @@
-package com.dexmohq;
+package com.dexmohq.win.service;
+
+import com.dexmohq.util.ServiceUtils;
 
 import java.util.Map;
 
@@ -7,7 +9,7 @@ import static java.util.stream.Collectors.toMap;
 
 public class ServiceManager {
 
-    private final Map<String, ServiceController> services;
+    private final Map<String, CmdServiceController> services;
 
     private ServiceManager() {
         services = ServiceUtils.getServices()

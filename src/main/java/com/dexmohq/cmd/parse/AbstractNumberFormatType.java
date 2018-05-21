@@ -1,4 +1,4 @@
-package com.dexmohq.util;
+package com.dexmohq.cmd.parse;
 
 public interface AbstractNumberFormatType extends PropertyType<Integer> {
 

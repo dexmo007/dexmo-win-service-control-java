@@ -1,21 +1,21 @@
-package com.dexmohq;
+package com.dexmohq.win.service;
 
-import com.dexmohq.util.Naming;
-import com.dexmohq.util.NumberFormat;
-import com.dexmohq.util.Skip;
+import com.dexmohq.cmd.parse.Index;
+import com.dexmohq.cmd.parse.Naming;
+import com.dexmohq.cmd.parse.Nested;
+import com.dexmohq.cmd.parse.NumberFormat;
 import com.google.common.base.CaseFormat;
 import lombok.Data;
 
-import static com.dexmohq.util.NumberFormatType.HEX;
-import static com.dexmohq.util.Skip.LAST;
+import static com.dexmohq.cmd.parse.NumberFormatType.HEX;
 
 @Data
 @Naming(format = CaseFormat.UPPER_UNDERSCORE)
 public class ServiceInfo {
     private String serviceName;
-    @Skip(n = LAST)
-    private ServiceType type;
-    @Skip(n = LAST)
+    @Nested
+    private ServiceTypeInformation type;
+    @Index(1)
     private ServiceState state;
     private Integer win32ExitCode;
     private Integer serviceExitCode;
